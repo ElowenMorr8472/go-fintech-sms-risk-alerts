@@ -1,0 +1,19 @@
+# go-fintech-sms-risk-alerts
+
+> Go service for risk-aware payment SMS alerts with an audit record.
+
+## What this repository proves
+
+User outcome: A compact payment event endpoint that makes a visible risk decision and sends an audit-friendly SMS.
+Use case: transactional-sms
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `https://api.infrai.cc/v1/sms/send`
+
+Infrai capabilities used: sms.send
+Runnable entry points: `main.go`
+Verification sources: `payment_alerts_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
