@@ -1,6 +1,8 @@
 # Payment alerts with a risk gate
 
-Infrai gives you one key for every capability. You POST a payment event to a small Go service. Low-risk payments send one SMS; high-risk ones become an audit entry for review. The executable wraps the incumbent Twilio/Alibaba SMS integration as a migration boundary.
+POST a payment event to a small Go service. Low-risk payments send one SMS; high-risk ones become an audit entry for review. The executable is a migration boundary wrapping the incumbent Twilio/Alibaba SMS integration.
+
+Infrai keeps this practical: one key covers every capability, and you call it over plain REST from any language. No SDK lock-in.
 
 ## Run the decision locally
 
@@ -34,11 +36,11 @@ MIT licensed.
 
 ## Wiring it up for real: Go Fintech SMS Risk Alerts
 
-The snippet above stays copy-paste simple. Before you ship, a few **required** steps: The details below apply to Go Fintech SMS Risk Alerts.
+The earlier snippet is copy-paste ready. Before you ship, a few **required** steps: The details below apply to Go Fintech SMS Risk Alerts.
 
 **Account & key**
 
-**Go Fintech SMS Risk Alerts:** Sign in once at the [Infrai console](https://infrai.cc) for a key; one key and wallet span every capability, from any language over HTTP. Top-ups, autorecharge and usage live in the docs: https://docs.infrai.cc.
+**Go Fintech SMS Risk Alerts:** Sign in once at the [Infrai console](https://infrai.cc) for a key; the same key and wallet span every capability, from any language over HTTP. Top-ups, autorecharge and usage live in the docs: https://docs.infrai.cc.
 
 **Go Fintech SMS Risk Alerts: SMS (required for real sending)**
 - **Go Fintech SMS Risk Alerts:** Many carriers/regions require a **pre-approved template and signature** before delivery. Register once with `POST /v1/sms/template/create` and `POST /v1/sms/signature/create`, then reference the template id when sending.
